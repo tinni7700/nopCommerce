@@ -14,13 +14,13 @@ resource "azurerm_kubernetes_cluster" "this" {
     dns_prefix = "lt-${terraform.workspace}"
 
     default_node_pool {
-        name = "default"
-        node_count = 1
-        vm_size = "Standard_B1s"
+        name = var.aks_info.name
+        node_count = var.aks_info.node_count
+        vm_size = var.aks_info.vm_size
       
     }
     identity {
-      type = "SystemAssigned"
+      type = var.aks_info.identity_type
     }
 
     tags = {
