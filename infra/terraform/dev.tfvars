@@ -14,4 +14,4 @@ resource_group_info = {
 
 # This can be pass from terminal as jenkins will be calling this 
 # --var build_number=
-build_number = 0
+# build_number = 0
