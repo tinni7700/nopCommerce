@@ -25,7 +25,7 @@ variable "aks_info" {
   default = {
     name              = "default"
     node_count        = 1
-    vm_size           = "Standard_B1s"
+    vm_size           = "Standard_B2ms"
     identity_type     = "SystemAssigned"
 
   }
