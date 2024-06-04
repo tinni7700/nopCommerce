@@ -22,7 +22,7 @@ pipeline {
         stage('infra provisioning') {
             steps {
                 // This will use to create infra structure
-                sh 'cd infra/terraform && terraform init && terraform workspace select dev && terraform apply -var-file="dev.tfvars" -var="build_number=1" -auto-approve'
+                sh 'cd infra/terraform && terraform init && terraform workspace select dev && terraform apply -var-file="dev.tfvars" -var "build_number=${BUILD_ID}" -auto-approve'
             }
         }
         stage('deploy'){
