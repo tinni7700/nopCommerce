@@ -15,8 +15,8 @@ pipeline {
         stage('build docker image') {
             steps {
                 // This will use to create docker image
-                sh 'docker image build -t panky7700/nop-test-terraform:latest .'
-                sh 'docker image push panky7700/nop-test-terraform:latest'
+                sh 'docker image build -t panky7700/nop-test-terraform:latst .'
+                sh 'docker image push panky7700/nop-test-terraform:latst'
             }
         }
         stage('infra provisioning') {
