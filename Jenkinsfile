@@ -7,7 +7,7 @@ pipeline {
         stage('git') {
             steps {
                 // This will use to create git pull
-                git url: 'https://github.com/tinni7700/nopCommerce-02June2024.git'
+                git url: 'https://github.com/tinni7700/nopCommerce-02June2024.git',
                     branch: 'develop'
 
             }
